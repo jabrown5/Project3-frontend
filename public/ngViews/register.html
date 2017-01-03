@@ -1,0 +1,36 @@
+<!--  <h4 class="header center orange-text">Please Register for a Potty Check Account</h4>
+ -->
+
+ <h1 class="header center orange-text" style="font-size:2.5rem; height: 40px;">Please Register for a Potty Check Account</h1>
+
+ <h5 class="header center grey-text">{{message}}</h>
+<div id="registerbody">
+
+	<div class="container" id="comments" style="height:260px;">
+		<div>
+			<form style="padding-top:10px;" ng-submit="createAccount(username, email, password)">
+				<div class="row">
+					<div class="four columns">
+
+						<!-- <label for="username">Username</label> -->
+					 	<input class="u-full-width" type="text" ng-model="username" placeholder="Username">
+			 		</div>
+
+			 		<div class="four columns">
+					 	<!-- <label for="email">Email</label> -->
+					 	<input class="u-full-width" type="text" ng-model="email" placeholder="Email">
+			 		</div>
+
+			 		<div class="four columns">
+					 	<!-- <label for="password">Password</label> -->
+					 	<input class="u-full-width" ng-model="password" placeholder="password" required
+					 	id="password" type="password" class="validate">
+			 		</div>
+
+				    <input type="hidden" ng-model="password_hash" placeholder="password"><br> <!-- is this hidden? -->
+				    <input class="center light-blue lighten-2 waves-effect waves-light btn-large" type="submit" value="Sign Up">
+			    </div>
+			</form> 
+		</div>
+	</div>
+</div>

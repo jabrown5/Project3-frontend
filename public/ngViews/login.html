@@ -1,0 +1,46 @@
+<!-- <h4 class="header center orange-text">Potty Check Return User</h4>
+ -->
+<h1 class="header center orange-text" style="font-size:2.5rem; height: 40px;">Potty Check Return User</h1>
+
+<h5 class="header center grey-text">{{message}}</h>
+
+<div id="loginbody">
+<!-- <style type="text/css">
+    .container {
+        width: 900px;
+        clear: both;
+    }
+    .container input {
+        width: 100%;
+        clear: both;
+    }
+</style> -->
+
+	<div class="container" id="comments" style="height:200px;">
+		<form ng-submit="loginAccount(username, email, password)">
+
+			<div class="four columns">
+			 	<!-- <label for="username">Your name</label> -->
+			 	<input class="u-full-width" type="text" ng-model="username" placeholder="Name" required>
+	 		</div>
+
+	<!--  		<div class="four columns">
+			 	<label for="email">Email</label>
+			 	<input class="u-full-width" type="text" ng-model="email" placeholder="email" required>
+	 		</div> -->
+
+	 		<div class="four columns">
+			 	<!-- <label for="password">Password</label> -->
+			 	<input class="u-full-width" ng-model="password" placeholder="password" required 
+			 	id="password" type="password" class="validate">
+	 		</div>
+
+<!-- <a class="center light-blue lighten-2 waves-effect waves-light btn-large" href='/login'> -->
+	 		<div>
+				<input class="center light-blue lighten-2 waves-effect waves-light btn-large" type="submit" value="Login">
+			</div>
+		</form>
+
+	</div>
+
+</div>

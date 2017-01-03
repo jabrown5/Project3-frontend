@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html  ng-app="pottyCheck">
+  <head>
+    <!-- Import Google Icon Fonts -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' media="screen,projection" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="javascripts/materialize.min.js"></script>
+
+    <script src="/javascripts/angular.js"></script>
+    <script src="/javascripts/angular-route.js"></script>
+
+
+     <!-- <script type="text/javascript" src="javascripts/ngPlacesAutocomplete.js"></script> -->
+    <script type="text/javascript" src="javascripts/app.js"></script>
+
+    <script src="/javascripts/app.CreatePostCtrl.js"></script>
+    <script src="/javascripts/app.PostsCtrl.js"></script>
+    <script src="/javascripts/app.DeletePostCtrl.js"></script>
+    <script src="/javascripts/app.CommentsCtrl.js"></script>
+    <script src="/javascripts/app.RegisterCtrl.js"></script>
+    <script src="/javascripts/app.LoginCtrl.js"></script>
+    <script src="/javascripts/app.HomeCtrl.js"></script>
+    <script src="/javascripts/app.FindCtrl.js"></script>
+    <script src="/javascripts/app.MapCtrl.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $(".button-collapse").sideNav();
+        $('.parallax').parallax();
+        $(".dropdown-button").dropdown({
+            hover: false
+        });
+    });
+    </script>
+
+
+        <div class="left animated bounce" id="logo-container" href="/" class="brand-logo" >
+          <img id="toilet"  src="stylesheets/images2/unirestroom.png" alt="Unisex Restroom Symbol" style="margin-left:2rem; padding-top: .75rem; height: 130px; width: 130px;">
+        </div>
+
+
+  </head>
+  <body>
+
+  <nav class="light-blue darken-1" role="navigation" style="height:10rem">
+
+      <div class="nav-wrapper container">
+
+{{!--         <a id="logo-container" href="/" class="brand-logo">
+          <img id="toilet" src="stylesheets/images2/unirestroom.png" alt="Unisex Restroom Symbol" style="margin-left:2rem; padding-top: .75rem; height: 130px; width: 130px;">
+        </a> --}}
+
+
+          <ul class="right hide-on-med-and-down">
+              <li ng-controller="LoginCtrl" ng-click="logOutAccount(username, email, password)"><a href="/logout">Logout</a></li>
+              <li><a href="/register">Register</a></li>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/create">Post a Potty</a></li>
+              <li><a href="/comments">Comment on a Potty</a></li>
+              <li><a href="/find">See the Map</a></li>
+{{!--               <li><a href="/youAreHere">See your location</a></li> --}}          
+          </ul>
+
+
+          <ul id="nav-mobile" class="side-nav">
+{{!--               <li><a href="/youAreHere">See your location</a></li>
+ --}}              
+              <li><a href="/find">See the Map</a></li>
+              <li><a href="/comments">Comment on a Potty</a></li>
+              <li><a href="/create">Post a Potty</a></li>
+              <li><a href="/login">Login</a></li>
+              <li><a href="/register">Register</a></li>
+              <li><a href="/logout">Logout</a></li>
+          </ul>
+
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      </div>
+  </nav>
+
+{{!--     {{{body}}}   --}}
+
+    <div ng-view></div>
+
+
+  <footer class="page-footer grey">
+      <div class="container">
+          <div class="row">
+              <div class="col l5 s12">
+                  <h5 class="white-text">About Us</h5>
+                  <p class="grey-text text-lighten-4">We are a team of WDI students <br>from General Assembly in Chicago, IL. <br>All we want to do with this project is<br> make life a little bit easier for people <br>who are out and and about when nature calls!</p>
+
+              </div>
+              <div class="col l4 s12">
+                  <h5 class="white-text">Nav our site!</h5>
+                  <ul>
+                      <li><a class="white-text" href="/register">Register</a></li>
+                      <li><a class="white-text" href="/login">Login</a></li>
+                      <li><a class="white-text" href="/create">Create a new Potty Post</a></li>
+                      <li><a class="white-text" href="/comments">Comment on a Potty</a></li>
+                      <li><a class="white-text" href="/find">Find a Potty nearby</a></li>
+                  </ul>
+              </div>
+              <div class="col l3 s12">
+                  <h5 class="white-text">Connect</h5>
+                  <ul>
+                      <li><a class="white-text" href="#!">Jennifer Brown</a></li>
+                      <li><a class="white-text" href="#!">Tina Rodriguez</a></li>
+                      <li><a class="white-text" href="#!">Traci Williams</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div class="footer-copyright">
+          <div class="container">
+              Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> | 
+              &copy 2016 Potty Check 
+          </div>
+      </div>
+  </footer>
+
+{{!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIpSrdHM9RhwhUMEXaUeU7K9Y-xVRjrxI&callback=initMap&libraries=places" defer></script>
+ --}} 
+{{!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIpSrdHM9RhwhUMEXaUeU7K9Y-xVRjrxI&callback=initAutocomplete&libraries=places" defer></script> 
+ --}}
+
+  </body>
+
+    <script type="text/javascript">
+        $('select').material_select();
+    </script>
+
+</html>

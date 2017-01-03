@@ -1,0 +1,76 @@
+<style>
+        #firstmap,
+        #secondmap {
+            width: 50%;
+            height: 200px;
+            background-color: lightblue;
+            position: fixed;
+            left: 25%;
+        }
+</style>
+
+
+
+<!-- <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <h1 class="header center orange-text" style="font-size:3rem; height: 5px;">Gotta go? Potty Check!</h1>
+    <br><br>
+</div> -->
+
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+<!--         <br><br>
+ -->        
+    <h1 class="header center orange-text" style="font-size:3rem; height: 40px;">Gotta go? Potty Check!</h1>
+</div>
+
+<div id="secondmap"></div>
+
+
+<!-- <div class="container"> -->
+
+<div class="container" style="margin-top: -40px;">
+    <div class="section">
+
+        <!--   Icon Section   -->
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+                    <h5 class="center">What it's about</h5>
+
+                    <p class="light">Our objective here is <em>clean</em> and simple.  We want you to find the most suitable facilities to address your most delicate matters.  Tired of searching for a public restroom when you're out and about?  Are you even more tired of gross, dirty restrooms?  Wish you could find the nearest, cleanest restroom?  Now, you can!</p>
+                </div>
+            </div>
+
+            <div class="col s12 m6">
+                <div class="icon-block">
+                    <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+                    <h5 class="center">How to use this site</h5>
+
+                    <p class="light">Our app will help you find the nearest, reviewed "potty" via our nifty map.  Just click on the "See the Map" tab.  Do you want to make a potty review?  Sure! You can do that, as well, by using the "Comment on a Potty" tab. Or would you like to post a potty you've found-- click on the "Post a Potty". <br><br>  But, FIRST, you have to become a registered user.  Please click the register button below to get started.</p>
+                </div>
+            </div>
+        </div>
+
+    </div><!--end of secction-->
+    
+<!--     <br><br>
+ -->
+</div><!--end of container-->
+
+
+<section id="adminsection">
+        <div class="two-third column center">
+                <ul>   
+                <a class="light-blue darken-2 waves-effect waves-light btn-large" href='/register'>REGISTER</a>
+                <a class="light-blue darken-2 waves-effect waves-light btn-large" href='/login'>LOGIN</a>
+            </ul>
+        </div>
+</section>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIpSrdHM9RhwhUMEXaUeU7K9Y-xVRjrxI&callback=initAutocomplete&libraries=places" defer></script> 
+
+<script type="text/javascript">
+    $('select').material_select();
+</script>

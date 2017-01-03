@@ -1,0 +1,166 @@
+<!-- <h3 class="header center orange-text">Post a Review</h3>
+ -->
+
+ <h1 class="header center orange-text" style="font-size:2.5rem; height: 40px;">Post a Review</h1>
+
+<h5 class="header center grey-text">{{message}}</h5>
+
+  <style>
+          #firstmap,
+          #secondmap {
+              width: 90%;
+              height: 400px;
+              background-color: lightblue;
+              position: fixed;
+              left: 5%;
+          }
+  </style>
+
+
+<div class="container" id="comments">
+
+<form ng-submit="createPost(facility_name, address, publicly_accessible, cleanliness, family_friendly, gender, latitude, longitude, api_key, user_submission)"  >
+
+  <div class="row">
+
+  <div class="grey-text text-lighten-1" id="addressField">
+    <input id="autocomplete" type="text" placeholder="ENTER ADDRESS HERE!" onFocus="pottyLocate()" ng-model="address" ng-places-autocomplete ></input>
+  </div> 
+
+
+
+    <tr >
+      <td class="label"><!-- Location address --></td>
+      <td class="slimField">
+        <input type="hidden" class="field" id="street_number" disabled="true" ></input>
+      </td>
+
+      <td class="wideField">
+        <input type="hidden" class="field" id="route" disabled="true" ></input>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="label"><!-- Location name --></td>
+      <td class="slimField"><input type="hidden" class="field" id="" disabled="true"></input></td>
+      <td class="wideField grey-text text-lighten-1" ><input class="field" placeholder="Facility Name" id="route"  ng-model="facility_name"></input></td>
+    </tr>
+
+
+    <tr type="hidden">
+      <td class="label"><!-- City --></td>
+      <td class="wideField" colspan="3"><input type="hidden" class="field" id="locality" disabled="true"></input></td>
+    </tr>
+      
+    <tr type="hidden">
+      <td class="label"><!-- State --></td>
+      <td class="slimField"><input type="hidden" class="field" id="administrative_area_level_1" disabled="true"></input></td>
+
+
+      <td class="label"><!-- Zip code --></td>
+      <td class="wideField"><input type="hidden" class="field" id="postal_code" disabled="true"></input></td>
+    </tr>
+     
+ <!--   <label for="latitudes"></label> -->
+    <div>
+      <input type="hidden" class="field" id="lat" disabled="true" ng-model="latitude">
+    </div>
+
+    <div>
+    <!--   <label for="longitudes"></label> -->
+      <input type="hidden" class="field" id="lng" disabled="true" ng-model="longitude">
+    </div>
+
+
+<!--     <div class="input-field col s12">
+      <select type="text" ng-model="publicly_accessible">
+        <option for="publicaccessibility" disabled selected>Is This Publicly Accessible?</label>
+        <option value="Yes">yes</option>
+        <option value="No">no</option>
+      </select>
+    </div> -->
+
+<div class="input-field col s12 grey-text text-lighten-1">
+    <select ng-model="publicly_accessible" >
+        <option value="">Is This Publicly Accessible?</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+</div>  
+
+<!--     <div class="input-field col s12">
+      <select type="text" ng-model="cleanliness">
+        <option for="cleanliness" disabled selected>How Clean Is It?</label>
+        <option value="1">very dirty</option>
+        <option value="2">somewhat dirty</option>
+        <option value="3">neither clean nor dirty</option>
+        <option value="4">somewhat clean</option>
+        <option value="5">very clean</option>
+      </select>   
+    </div> -->
+
+<div class="input-field col s12 grey-text text-lighten-1">
+    <select ng-model="cleanliness" >
+        <option value="">How Clean Is It?</option>
+        <option value="1">very dirty</option>
+        <option value="2">somewhat dirty</option>
+        <option value="3">neither clean nor dirty</option>
+        <option value="4">somewhat clean</option>
+        <option value="5">very clean</option>   
+    </select>
+</div>
+
+<!--     <div class="input-field col s12">   
+      <select type="text" ng-model="family_friendly">
+        <option for="familyfriendly" disabled selected>Is This Family Friendly?</label>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>   
+    </div> -->
+
+<div class="input-field col s12 grey-text text-lighten-1">
+    <select ng-model="family_friendly">
+        <option value="">Is This Family Friendly?</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+</div>
+
+<!--     <div class="input-field col s12">      
+        <select type="text" ng-model="gender">
+        <option for="gender" disabled selected>Is This Gender Specific?</label>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+      </select>   
+    </div> -->
+
+<div class="input-field col s12 grey-text text-lighten-1">  
+    <select ng-model="gender" >
+        <option value="">Is This Gender Specific?</option>
+        <option value="Yes">Yes</option>
+        <option value="No">No</option>
+    </select>
+</div>    
+
+    <div>
+      <input type="hidden" ng-model="user_submission">
+    </div>
+   
+    <button class="center light-blue lighten-2 waves-effect waves-light btn-large" type="submit" name="action">Submit<i class="material-icons right">send</i>
+    </button>
+
+  </div>
+
+
+</form>
+
+  </div>
+
+<!-- <div id="firstmap"></div>
+ -->
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIpSrdHM9RhwhUMEXaUeU7K9Y-xVRjrxI&callback=initAutocomplete&libraries=places" defer></script> 
+
+<script type="text/javascript">
+    $('select').material_select();
+</script>

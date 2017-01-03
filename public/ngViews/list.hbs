@@ -1,0 +1,17 @@
+
+<h1 class="header center orange-text" style="font-size:2.5rem; height: 40px;">List of all Potty Submissions</h1>
+
+<article  class="container" id="comments" ng-controller="FindCtrl">
+	<ul>
+	    <li ng-repeat="potty in potties">
+	        <h4>{{potty.facility_name}}</h4>
+	        <h5>{{potty.address}}</h5>
+	        <p><b>Latitude: </b>{{potty.latitude}}, <b>Longitude: </b>{{potty.longitude}}</p>
+	        <p><b>Publicly Accessible:</b> {{potty.publicly_accessible}} </p>
+	        <p><b>Family Friendly: </b>{{potty.family_friendly}}</p>
+	        <p><b>Gender Specific:</b> {{potty.gender}} </p>
+	        <p><b>Cleanliness: </b>{{potty.cleanliness}}/5 </p>
+	        <p><b>Submitted by: </b>{{potty.user_submission}} <b>on</b> {{potty.created_at}}</p>
+	    </li>
+	</ul>
+</article>
